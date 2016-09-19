@@ -20,9 +20,9 @@ class {{ module_info.name }}ModuleConfigurator {
     private func configure(view: {{ module_info.name }}View) {
 
         let interactor = {{ module_info.name }}Interactor()
-        presenter.view = view
+        interactor.view = view
 
-        view.output = presenter
+        view.output = interactor
     }
 
 }
