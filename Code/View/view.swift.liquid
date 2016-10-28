@@ -17,6 +17,7 @@ class {{ module_info.name }}View: UIView {
         super.init(coder: aDecoder)
         
         NSBundle.mainBundle().loadNibNamed(String({{ module_info.name }}View), owner: self, options: nil)
+        view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.addSubview(view)
         view.frame = self.bounds
     }
